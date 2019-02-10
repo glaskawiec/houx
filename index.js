@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer } from 'react';
 
-const Context = createContext();
+export const Context = createContext();
 
 export const Provider = ({ store, children }) => (
     <Context.Provider value={useReducer(store, store())}>

@@ -21,7 +21,7 @@
     "url": "https://github.com/glaskawiec/houx/issues"
   },
   "homepage": "https://github.com/glaskawiec/houx#readme",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^16.8.1"
   }
 }
