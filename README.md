@@ -1,6 +1,6 @@
 # ✨Houx
-Litleweight React plugin which implements flux architecture using the built-in React API.  
-It connects React.Context with useReducer() from React Hooks to provide global reducers.
+Light React plugin which implements flux architecture using the built-in React API.  
+It connects React.Context with useReducer() from React Hooks to provide global state reducers.
 
 ## :pencil: Prerequisites
 *  [NPM](https://www.npmjs.com/) installed
