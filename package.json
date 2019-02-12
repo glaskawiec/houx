@@ -2,8 +2,8 @@
   "name": "houx",
   "version": "1.0.2",
   "description": "",
-  "main": "build/index.js",
-  "unpkg": "build/index.js",
+  "main": "lib/index.js",
+  "unpkg": "lib/index.js",
   "scripts": {
     "start": "webpack --watch",
     "build": "webpack"
