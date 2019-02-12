@@ -8,15 +8,14 @@ export const Provider = ({ store, children }) => (
     </Context.Provider>
 )
 
-export const createStoreWithReducers = (schema) => {
+export function createStoreWithReducers(schema) {
     return (state, action) => {
         let combinedReducers = {};
         const schemaEntries = Object.entries(schema);
-        for (let i of schemaEntries) {
-            const namespace = i[0];
-            const reducerFcn = i[1];
-            combinedReducers[namespace] = reducerFcn(state && state[namespace], action);
-        }
+        schemaEntries.forEach((e) => {
+            const [namespace, reducer] = e;
+            combinedReducers[namespace] = reducer(state && state[namespace], action);
+        })
         return combinedReducers;
     }
 }
