@@ -6,7 +6,8 @@
   "unpkg": "lib/index.js",
   "scripts": {
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",
