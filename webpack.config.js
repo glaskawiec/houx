@@ -3,7 +3,7 @@ module.exports = {
   entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'lib'),
-    filename: 'index.jsx',
+    filename: 'index.js',
     libraryTarget: 'commonjs2'
   },
   module: {
