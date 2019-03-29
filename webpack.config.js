@@ -1,15 +1,15 @@
 var path = require('path');
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'lib'),
-    filename: 'index.js',
+    filename: 'index.jsx',
     libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         include: path.resolve(__dirname, 'src'),
         exclude: /(node_modules|bower_components|lib)/,
         use: {
@@ -19,6 +19,6 @@ module.exports = {
     ]
   },
   externals: {
-    'react': 'commonjs react' 
+    'react': 'commonjs react'
   }
 };
