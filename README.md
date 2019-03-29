@@ -30,7 +30,7 @@ export const initialState = {
 }
 
 const tasksReducer = (state = initialState, action) => {
-    switch (action && action.type) {
+    switch (action.type) {
         case TASKS_ADD:
             const newTodo = {
                 ...action.task,
@@ -59,23 +59,23 @@ const tasksReducer = (state = initialState, action) => {
 export default tasksReducer;
 ```
 
-Use Provider and pass reducers to enable access to global state from any app component:
+Use HouxProvider and pass reducers to enable access to global state from any app component:
 ```
 import React from 'react';
-import { Provider, createStoreWithReducers } from 'houx';
+import ReactDOM from 'react-dom';
+import { HouxProvider } from 'houx';
+import App from './App';
+import discover from './Flux/Reducers/tasks';
 
 const reducers = {
-    tasks: tasksReducer
-}
+    tasks
+};
 
-export default function App() {
-  const store = createStoreWithReducers(reducers);
-  return (
-    <Provider store={store}>
-        <AppContent/>
-    </Provider>
-  )
-}
+ReactDOM.render(
+  <HouxProvider reducers={reducers} logDispatchedActions>
+    <App />
+  </HouxProvider>, document.getElementById('root'),
+);
 
 ```
 Access dispatch and global state using useHoux hook:
@@ -85,7 +85,7 @@ import { useHoux } from 'houx';
 import { removeTask } from '../../../flux/actions/tasksActions';
 
 export default function RemoveButton(props) {
-    const [state, dispatch] = useHoux();
+    const { state, dispatch } = useHoux();
 
     const onClick = () => {
         dispatch(removeTask(props.itemId));
