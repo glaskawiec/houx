@@ -18,10 +18,10 @@ https://github.com/glaskawiec/houxTasks
 ```
 
 ## HouxProvider API
-| prop  | description |
-| ------------- | ------------- |
-| reducers  | Flux reducers  |
-| logDispatchedActions   | Enables simple dispatched actions loging  |
+| prop  | description | example value |
+| ------------- | ------------- | ------------- |
+| reducers  | Flux reducers  | `{ spaceName: (state,action) => newState }` |
+| logDispatchedActions   | Enables simple dispatched actions loging  | `true` |
 
 
 ## ✌ Usage
