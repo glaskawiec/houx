@@ -17,6 +17,13 @@ npm install --save houx
 https://github.com/glaskawiec/houxTasks
 ```
 
+## HouxProvider API
+| prop  | description |
+| ------------- | ------------- |
+| reducers  | Flux reducers  |
+| logDispatchedActions   | Enables simple dispatched actions loging  |
+
+
 ## ✌ Usage
 Create your actions and reducers:
 ```
@@ -100,7 +107,7 @@ export default function RemoveButton(props) {
             aria-label="cross">❌</span>
     )
 }
-```
 
+```
 ---
 ##### glaskawiec © 2019 - MIT license
