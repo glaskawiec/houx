@@ -2,6 +2,10 @@
 Light React plugin which implements flux architecture using the built-in React API.  
 It connects React.Context with useReducer() from React Hooks to provide global state reducers.
 
+Allows you to send asynchronous actions (redux-thunk style).  
+It has a built-in simple loger witch shows dispatched actions.  
+
+
 ## :pencil: Prerequisites
 *  [NPM](https://www.npmjs.com/) installed
 *  [React 16.8.1](https://reactjs.org) or higher installed
