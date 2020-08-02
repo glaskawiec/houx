@@ -18,7 +18,7 @@ npm install --save houx
 
 ## ✍ Example project
 ```
-https://github.com/glaskawiec/houxTasks
+https://github.com/glaskawiec/task-manager
 ```
 
 ## HouxProvider API
